@@ -1,8 +1,5 @@
 gdt_start: 
-
-gdt_null:
-    dd 0x0
-    dd 0x0 
+    dq 0x0
 
 gdt_code:
     dw 0xFFFF ; limit (bits 0-15)
@@ -17,14 +14,14 @@ gdt_data:
     dw 0xFFFF ; limit (bits 0-15)
     dw 0x0 ; base (bits 0-15) 
     db 0x0 ; base (bits 16-23)
-    db 10001010b ; first flags
+    db 10010010b ; first flags
     db 11001111b ; second flags
     db 0x0 ; base (bits 24-31)
 
 gdt_end:
 
 gdt_descriptor:
-    dw gdt_end - gdt_start - 1
+    dw gdt_end - gdt_start
     dd gdt_start
 
 CODE_SEG equ gdt_code - gdt_start
