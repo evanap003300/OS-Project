@@ -1,7 +1,7 @@
 [bits 32]
 
 VIDEO_MEMORY equ 0xb8000
-WHITE_ON_BLACK equ 0x0f
+GREEN_ON_BLACK equ 0x0A
 
 print_string_pm:
     pusha
@@ -9,7 +9,7 @@ print_string_pm:
 
 print_string_pm_loop:
     mov al, [ebx]
-    mov ah, WHITE_ON_BLACK
+    mov ah, GREEN_ON_BLACK
 
     cmp al, 0
     je print_string_pm_done
