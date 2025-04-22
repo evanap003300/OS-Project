@@ -57,7 +57,7 @@ BEGIN_PM:
     jmp $
 
 error_msg: db "Error when reading disk!", 0
-msg_pm_mode: db "Welcome to JerkOS ;)", 0
+msg_pm_mode: db "Welcome to GovieOS", 0
 
 times 510-($-$$) db 0
 dw 0xAA55
