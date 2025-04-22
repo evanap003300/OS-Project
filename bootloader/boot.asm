@@ -1,5 +1,5 @@
 ; ----------------------------------
-; Description: Bootloader for JerkOS
+; Description: Bootloader for GovieOS
 ; Author: Evan Phillips
 ; Last Updated: 04/13/2025
 ; ----------------------------------
